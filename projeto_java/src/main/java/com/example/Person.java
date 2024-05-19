@@ -22,4 +22,9 @@ public class Person {
     public int getAge() {
         return age;
     }
+
+    public void printDetails() {
+        String details = "Name: " + firstName + " " + lastName + ", Age: " + age;
+        System.out.println(details);
+    }
 }
