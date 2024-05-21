@@ -26,4 +26,9 @@ public class Product {
     public double getTotalRevenue() {
         return price * quantitySold;
     }
+
+    // Novo método
+    public String getSummary() {
+        return name + ": " + quantitySold + " sold, Total revenue: $" + getTotalRevenue();
+    }
 }

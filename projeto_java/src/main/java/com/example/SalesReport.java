@@ -9,14 +9,10 @@ public class SalesReport {
         this.products = products;
     }
 
-    public String generateProductSummary(Product product) {
-        return product.getName() + ": " + product.getQuantitySold() + " sold, Total revenue: $" + product.getTotalRevenue();
-    }
-
     public void generateFullReport() {
         StringBuilder report = new StringBuilder();
         for (Product product : products) {
-            report.append(generateProductSummary(product)).append("\n");
+            report.append(product.getSummary()).append("\n");
         }
 
         System.out.println(report.toString());
