@@ -25,8 +25,15 @@ public class App {
         Book book2 = new Book("Amor a vista", "Felipa", "879-65");
         booksList.add(book1);
         booksList.add(book2);
-
         Library library = new Library(booksList);
         library.generateLibraryReport();
+
+        System.out.println("~~~~~~~~~");
+        // Feature Envy -> Inline Method
+        List<Product> productsList = new ArrayList<>();
+        Product product1 = new Product("Carro", 20000, 1);
+        productsList.add(product1);
+        SalesReport salesRepost = new SalesReport(productsList);
+        salesRepost.generateFullReport();
     }
 }
