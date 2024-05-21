@@ -16,4 +16,10 @@ public class Customer {
     public Address getAddress() {
         return address;
     }
+
+    // Novo método
+    public String getFullAddress() {
+        return address.getStreet() + ", " + address.getCity() + ", " + address.getZipCode();
+    }
+
 }

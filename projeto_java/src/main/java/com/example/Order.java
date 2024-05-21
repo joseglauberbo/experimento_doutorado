@@ -8,8 +8,7 @@ public class Order {
     }
 
     public void getShippingDetails() {
-        Address address = customer.getAddress();
-        String details = customer.getName() + ": " + address.getStreet() + ", " + address.getCity() + ", " + address.getZipCode();
+        String details = customer.getName() + ": " + customer.getFullAddress();
         System.out.println(details);
     }
 }
